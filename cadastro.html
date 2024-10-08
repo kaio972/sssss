@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
+    <title>Cadastro</title>
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="registerfirebase.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap" rel="stylesheet">
+    <!-- Icon Favicon -->
+    <link rel="icon" href="favicon.png">
+    <!-- complements -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header class="main-menu">
+        <main>
+            <div class="header-1">
+                <div class="logo">
+                    <a href="index.html"><img src="461030642_487995664068639_6310838915606418665_n.jpg" /></a>
+                </div>
+                <form action="#" method="get">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Olá, o que você procura?" id="search-input"
+                            list="search-suggestions">
+                        <datalist id="search-suggestions" class="browserdata">
+                            <option value="Se tive duvidas vem pv" data-url=""></option>
+                            <option value="Cadastro" data-url="cadastro.html"></option>
+                            <option value="Login" data-url="login.html"></option>
+                            <option value="Inicio da pagina" data-url="index.html"></option>
+                            <option value="Suporte - Fale conosco" data-url="//wa.me/5519994302836?text=ola%0A"></option>
+                        </datalist>
+                        <button type="submit" id="search-button"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+                <div class="social-media">
+                    <ul>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </header>
+    <main class="col-100 menu-urls">
+        <div class="header-2">
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="login.html">Minha Conta</a></li>
+                    <li>Produtos <i class="fas fa-angle-down"></i>
+                        <ul>
+                            <li><a href=>PRL</a></li>
+                            <li><a href=>Cursos</a></li>
+          
+                        </ul>
+                    </li>
+                    <li>Blog <i class="fas fa-angle-down"></i>
+                        <ul>
+                            <li><a href="https://setor-geek-blog.web.app/">Crie sua conta para ter experiencia melhor</a><span>22 Posts</span></li>
+                            <!--nao pronta-->
+                           ></li>
+                            <!--nao pronta-->
+                        </ul>
+                    </li>
+                    <li><a href="">Suporte</a></li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+
+    <div class="col-100-3">
+        <div class="container">
+            <div id="content_container">
+                <div id="form_container">
+                    <div id="form_header_container">
+                        <h1 id="form_header">Cadastrar</h1>
+                    </div>
+                    <div id='msgError'></div>
+                    <div id='msgSuccess'></div>
+                    <div id="form_content_container">
+                        <div id="form_content_inner_container">
+                            <div class="form-group">
+                                <div class="floating-label">
+                                    <input type="text" id="first_name" name="first_name" class="form-control" required>
+                                    <label id="labelname" for="name">Nome</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="floating-label">
+                                    <input type="text" id="last_name" name="last_name" class="form-control" required>
+                                    <label id="label_lastname" for="last_name">Sobrenome</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="floating-label">
+                                    <input type="text" id="email" name="email" class="form-control" required>
+                                    <label id="labelemail" for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="floating-label">
+                                    <input type="password" id="password" name="password" class="form-control" required>
+                                    <label id="labelpassword" for="password">Senha</label>
+                                    <span class="password-toggle" data-target="#password">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="floating-label">
+                                    <input type="password" id="confirm_password" name="confirm_password"
+                                        class="form-control" required>
+                                    <label id="labelconfirm_password" for="confirm_password">Confirmar senha</label>
+                                    <span class="password-toggle" data-target="#confirm_password">
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="button_container">
+                                <button onclick="register()">Cadastrar</button>
+                                <div id="back-login">
+                                    <a href="login.html"><button>Cancelar</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="col-100 footer">
+            <div class="content-2">
+                <div class="col-4">
+                    <h3><b>Nossa meta</b></h3>
+                    <p>O Setor Sperky surgiu com a missão de se tornar a maior comunidade de comércio do Brasil, e
+                        para alcançarmos
+                        esse objetivo, nos esforçamos diariamente para oferecer aos nossos clientes um atendimento de
+                        alta qualidade,
+                        garantia de segurança nas negociações e preços mais acessíveis em comparação aos praticados pelo
+                        mercado.
+                        Estamos comprometidos em proporcionar uma experiência de compra agradável e satisfatória para
+                        todos os amantes
+                        do universo digital
+                    </p>
+                </div>
+                <div class="col-4">
+                    <h3><b>Fundadores</b></h3>
+                    <a href="" target="blank">
+                        <p>Samuel <br>
+                    </a>
+                    <a href="" target="blank">
+                        <p>Kaio<br>
+                    </a>
+                  
+                </div>
+                <div class="col-4">
+                    <h3><b>Produtos</b></h3>
+                    <p>
+                        <a href=>
+                            <p>Cursos<br>
+                        </a>
+                        <a href=>
+                            <p>PRL<br>
+                        </a>
+                        <a href=>
+                            <p>Vendas<br>
+                        </a>
+                       
+                        </a>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <h3><b>Loja física</b></h3>
+                    <p>
+                        EM BREVE <br>
+                        <br> Horário de atendimento:
+                        <br> Seg à Sex das 9:00h às 17:30h.
+
+                    </p>
+                    <a href="https://www.google.com/maps?q=uninove+vila+prudente&rlz=1C1FCXM_pt-PTBR974BR974&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiqjbTa5573AhUqrpUCHT0qAoUQ_AUoAXoECAIQAw"
+                        target=”_blank”>
+                        <p class="local">Leme, SP</p>
+    
+                    </a>
+                    <a href="i.whatsapp.com/send?phone=5511941104068&text=Oi,%20me%20tira%20algumas%20dúvidas%20sobre%20como%20comprar%20no%20Setor Geek?"
+                        target=”_blank”>
+                        <p class="telefone">19-99511-9008</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <div class="col-100 footer-2">
+        <div class="content-mobile-3">
+            <div class="content">
+                <p>
+                    &copy; 2022-2023 Proibida a reprodução sem autorização.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="whatsapp">
+        <li>
+            <a href="https://web.whatsapp.com/send?phone=5511941104068&text=Oi,%20me%20tira%20algumas%20dúvidas%20sobre%20como%20comprar%20no%20Setor Geek?"
+                target=”_blank”>
+                <img src="whatsapp.png" /></a>
+        </li>
+    </div>
+
+</body>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+<!-- js -->
+<script type="text/javascript" src="search.js"></script>
+<script type="text/javascript" src="registerfirebase.js"></script>
+
+</html>
